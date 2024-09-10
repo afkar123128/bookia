@@ -3,10 +3,10 @@
 import 'package:flutter/material.dart';
 
 TextStyle getHeadLineTextSTyle(context,
-  {double fontSize=30,fontWeight=FontWeight.bold,Color?color}){
+  {double fontSize=30,fontWeight=FontWeight.normal,Color?color}){
 return TextStyle(
       
- fontFamily: "Poppins",
+ 
 fontSize: fontSize,
 fontWeight: fontWeight,
 color: color ??Theme.of(context).colorScheme.onSurface,

@@ -8,6 +8,7 @@ class AppThemes{
      fontFamily: "DMSerifDisplay",
     scaffoldBackgroundColor:Appcolors.whitecolor,
      appBarTheme: AppBarTheme(
+      backgroundColor: Appcolors.whitecolor,
       centerTitle: true,
       titleTextStyle: TextStyle(
         fontSize: 18,
@@ -17,10 +18,12 @@ color: Appcolors.textcolor,
      ),
      colorScheme: ColorScheme.fromSeed(seedColor: Appcolors.primarycolor,onSurface: Appcolors.textcolor),
      inputDecorationTheme: InputDecorationTheme(
-    
+    fillColor: Appcolors.accentcolor,
+    filled: true,
+    hintStyle: TextStyle(color: Appcolors.graytcolor,fontSize: 15),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.all(Radius.circular(10)),
-        borderSide: BorderSide(color: Appcolors.primarycolor),
+        borderSide: BorderSide(color: Appcolors.bordertcolor),
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.all(Radius.circular(10)),
