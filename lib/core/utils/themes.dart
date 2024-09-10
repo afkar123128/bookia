@@ -16,6 +16,7 @@ fontWeight: FontWeight.w500,
 color: Appcolors.textcolor,
       ),
      ),
+     dividerColor: Appcolors.bordertcolor,
      colorScheme: ColorScheme.fromSeed(seedColor: Appcolors.primarycolor,onSurface: Appcolors.textcolor),
      inputDecorationTheme: InputDecorationTheme(
     fillColor: Appcolors.accentcolor,

@@ -7,14 +7,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 
-class login_view extends StatefulWidget {
-  const login_view({super.key});
+class sign_up extends StatefulWidget {
+  const sign_up({super.key});
 
   @override
-  State<login_view> createState() => _login_viewState();
+  State<sign_up> createState() => _sign_upState();
 }
 
-class _login_viewState extends State<login_view> {
+class _sign_upState extends State<sign_up> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,22 +31,25 @@ class _login_viewState extends State<login_view> {
       body: Padding(
         padding: const EdgeInsets.all(24),
         child: SingleChildScrollView(
-          child: Column(children: [Text("Welcome back! Glad\n to see you, Again!",style: getHeadLineTextSTyle(context),),
+          child: Column(children: [Text("Hello! Register to get\n started",style: getHeadLineTextSTyle(context),),
           Gap(32),
+           TextFormField(
+            decoration: InputDecoration(hintText: "Username"),
+          ),
+          Gap(15),
           TextFormField(
-            decoration: InputDecoration(hintText: "Enter your email"),
+            decoration: InputDecoration(hintText: " Email"),
           ),
           Gap(15),
            TextFormField(
-            decoration: InputDecoration(hintText: "Enter your password",
-            suffixIcon: Padding(
-              padding: EdgeInsets.only(right: 18),
-              child: SvgPicture.asset("assets/icons/fluent_eye-20-filled.svg",width: 20,height: 20,),
-            ),suffixIconConstraints: BoxConstraints(
-              maxWidth: 48,
-              maxHeight: 17,
-            )),
+            decoration: InputDecoration(hintText: " Password",
+            )
           ),
+             Gap(15),
+           TextFormField(
+            decoration: InputDecoration(hintText: "Confirm password"),
+          ),
+       
           
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -54,11 +57,11 @@ class _login_viewState extends State<login_view> {
               style: TextButton.styleFrom(padding: EdgeInsets.zero),
               onPressed: (){}, child: Text("Forgot Password?",style: getSmallLineTextSTyle(context),))],
           ),Gap(30),
-          CustomButtom(text: "login", onTap: (){}),
+          CustomButtom(text: "lRegister", onTap: (){}),
           Gap(20),
           Row(children: [Expanded(child: Divider()),
           Gap(10),
-          Text("Or Login with",style: getSmallLineTextSTyle(context),),
+          Text("Or Register with",style: getSmallLineTextSTyle(context),),
           Gap(10)
 ,          Expanded(child: Divider())],),
            socialloginwidgets(),
@@ -66,11 +69,11 @@ class _login_viewState extends State<login_view> {
            Padding(
              padding: const EdgeInsets.only(bottom: 10),
              child: Row(mainAxisAlignment: MainAxisAlignment.center,
-              children: [Text("Don’t have an account?",style: getBodyLineTextSTyle(context),),
+              children: [Text("Already have an account?",style: getBodyLineTextSTyle(context),),
               TextButton(
                 style: TextButton.styleFrom(padding: EdgeInsets.zero),
                 
-                onPressed: (){}, child: Text("Register Now",style: getBodyLineTextSTyle(context,color: Appcolors.primarycolor),)),
+                onPressed: (){}, child: Text("Login Now",style: getBodyLineTextSTyle(context,color: Appcolors.primarycolor),)),
                 
                 
               
