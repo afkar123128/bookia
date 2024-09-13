@@ -3,6 +3,7 @@ import 'package:bookia/core/utils/colors.dart';
 import 'package:bookia/core/utils/text_style.dart';
 import 'package:bookia/core/widgets/custom_buttom.dart';
 import 'package:bookia/feature/auth/presentation/pages/login.dart';
+import 'package:bookia/feature/auth/presentation/pages/sign_up.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
@@ -32,7 +33,7 @@ class _welcome_viewState extends State<welcome_view> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Spacer(flex: 2,),
-                SvgPicture.asset("assets/images/Group 2918.svg"),
+                SvgPicture.asset("assets/images/Group 2918 (1).svg"),
                 Gap(20),
                 Text("Order Your Book Now!",style: getBodyLineTextSTyle(context,fontSize: 20),
                 ),
@@ -41,7 +42,9 @@ class _welcome_viewState extends State<welcome_view> {
                     push(context, login_view());
                   }),
                   Gap(15),
-                     CustomButtom(text: "Register", onTap: (){},color: Appcolors.whitecolor,
+                     CustomButtom(text: "Register", onTap: (){
+                      push(context, sign_up());
+                     },color: Appcolors.whitecolor,
                      textstyle: getBodyLineTextSTyle(context),),
                         Spacer(flex: 1,),
               ],

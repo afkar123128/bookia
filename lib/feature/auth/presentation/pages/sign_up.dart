@@ -29,10 +29,10 @@ class _sign_upState extends State<sign_up> {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(24),
+        padding: const EdgeInsets.all(15),
         child: SingleChildScrollView(
           child: Column(children: [Text("Hello! Register to get\n started",style: getHeadLineTextSTyle(context),),
-          Gap(32),
+          Gap(12),
            TextFormField(
             decoration: InputDecoration(hintText: "Username"),
           ),
@@ -50,14 +50,12 @@ class _sign_upState extends State<sign_up> {
             decoration: InputDecoration(hintText: "Confirm password"),
           ),
        
-          
-          Row(
+
+         Row(
             mainAxisAlignment: MainAxisAlignment.end,
-            children: [TextButton(
-              style: TextButton.styleFrom(padding: EdgeInsets.zero),
-              onPressed: (){}, child: Text("Forgot Password?",style: getSmallLineTextSTyle(context),))],
-          ),Gap(30),
-          CustomButtom(text: "lRegister", onTap: (){}),
+            children: [],
+          ),Gap(10),
+          CustomButtom(text: "Register", onTap: (){}),
           Gap(20),
           Row(children: [Expanded(child: Divider()),
           Gap(10),
@@ -65,7 +63,7 @@ class _sign_upState extends State<sign_up> {
           Gap(10)
 ,          Expanded(child: Divider())],),
            socialloginwidgets(),
-           Gap(90),
+           Gap(20),
            Padding(
              padding: const EdgeInsets.only(bottom: 10),
              child: Row(mainAxisAlignment: MainAxisAlignment.center,

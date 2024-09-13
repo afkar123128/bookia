@@ -27,7 +27,7 @@ class _splash_viewState extends State<splash_view> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SvgPicture.asset("assets/images/Group 2918.svg"),
+            SvgPicture.asset("assets/images/Group 2918 (1).svg"),
             Gap(15),
             Text("Order Your Book Now!",style: getBodyLineTextSTyle(context,fontSize: 20),),
           ],

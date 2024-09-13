@@ -9,13 +9,19 @@ class AppThemes{
     scaffoldBackgroundColor:Appcolors.whitecolor,
      appBarTheme: AppBarTheme(
       backgroundColor: Appcolors.whitecolor,
+      surfaceTintColor: Colors.transparent,
       centerTitle: true,
       titleTextStyle: TextStyle(
         fontSize: 18,
 fontWeight: FontWeight.w500,
 color: Appcolors.textcolor,
       ),
+      
      ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: Appcolors.whitecolor,
+      
+    ),
      dividerColor: Appcolors.bordertcolor,
      colorScheme: ColorScheme.fromSeed(seedColor: Appcolors.primarycolor,onSurface: Appcolors.textcolor),
      inputDecorationTheme: InputDecorationTheme(

@@ -1,7 +1,9 @@
+import 'package:bookia/core/function/navigation.dart';
 import 'package:bookia/core/utils/colors.dart';
 import 'package:bookia/core/utils/text_style.dart';
 import 'package:bookia/core/widgets/Back_buttom.dart';
 import 'package:bookia/core/widgets/custom_buttom.dart';
+import 'package:bookia/core/widgets/nav_bar.dart';
 import 'package:bookia/feature/auth/presentation/widgets/social_login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -54,7 +56,9 @@ class _login_viewState extends State<login_view> {
               style: TextButton.styleFrom(padding: EdgeInsets.zero),
               onPressed: (){}, child: Text("Forgot Password?",style: getSmallLineTextSTyle(context),))],
           ),Gap(30),
-          CustomButtom(text: "login", onTap: (){}),
+          CustomButtom(text: "login", onTap: (){
+            PushAndRemoveUntil(context, nav_bar());
+          }),
           Gap(20),
           Row(children: [Expanded(child: Divider()),
           Gap(10),
@@ -62,7 +66,7 @@ class _login_viewState extends State<login_view> {
           Gap(10)
 ,          Expanded(child: Divider())],),
            socialloginwidgets(),
-           Gap(90),
+           Gap(70),
            Padding(
              padding: const EdgeInsets.only(bottom: 10),
              child: Row(mainAxisAlignment: MainAxisAlignment.center,
