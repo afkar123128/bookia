@@ -47,11 +47,11 @@ class _nav_barState extends State<nav_bar> {
         
         ),
          BottomNavigationBarItem(icon: SvgPicture.asset(AssetIcons.Bookmark),
-        label: "save"),
+        label: "wishlist"),
                  BottomNavigationBarItem(icon: SvgPicture.asset(AssetIcons.Category),
-        label: "alarmcolock"),
+        label: "cart"),
          BottomNavigationBarItem(icon: SvgPicture.asset(AssetIcons.Profile),
-        label: "account",
+        label: "profile",
         )
        ],
        ) ,
