@@ -10,7 +10,12 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_svg: ^2.0.10+1
+  carousel_slider: ^5.0.0
+  smooth_page_indicator: ^1.2.0+3
   gap: ^3.0.1
+  http: ^1.2.2
+  maths: ^0.0.2
+  flutter_bloc: ^8.1.6
 
 dev_dependencies:
   flutter_test:
