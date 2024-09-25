@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class wishlist extends StatefulWidget {
-  const wishlist ({super.key});
+  const wishlist({super.key});
 
   @override
   State<wishlist> createState() => _wishlistState();

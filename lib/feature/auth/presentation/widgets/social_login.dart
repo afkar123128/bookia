@@ -9,11 +9,16 @@ class socialloginwidgets extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(children: [Expanded(child:(   SvgPicture.asset("assets/images/Facebook (Button).svg")) ),
-            Gap(8),
-            Expanded(child:(   SvgPicture.asset("assets/images/Google (Button).svg")) ),
-            Gap(8),
-            Expanded(child:(   SvgPicture.asset("assets/images/Apple (Button).svg")) ),
-            ],);
+    return Row(
+      children: [
+        Expanded(
+            child: (SvgPicture.asset("assets/images/Facebook (Button).svg"))),
+        Gap(8),
+        Expanded(
+            child: (SvgPicture.asset("assets/images/Google (Button).svg"))),
+        Gap(8),
+        Expanded(child: (SvgPicture.asset("assets/images/Apple (Button).svg"))),
+      ],
+    );
   }
 }

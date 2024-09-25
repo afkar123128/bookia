@@ -20,44 +20,54 @@ class _ForgotPasswordState extends State<ForgotPassword> {
     return Scaffold(
       backgroundColor: Appcolors.accentcolor,
       appBar: AppBar(
-        
         automaticallyImplyLeading: false,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            BackButtomWidgets(),],
+            BackButtomWidgets(),
+          ],
         ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(24),
         child: SingleChildScrollView(
-          child: Column(children: [Text("Forgot Password?",style: getHeadLineTextSTyle(context),),
-          Gap(10),
-          Text("Don't worry! It occurs. Please enter the email\n address linked with your account.",style: getSmallLineTextSTyle(context),),
-          Gap(32),
-          TextFormField(
-            decoration: InputDecoration(hintText: "Enter your email"),
-          ),
-             Gap(30),
-          CustomButtom(text: "Send Code", onTap: (){}),
-    
-           Padding(
-             padding: const EdgeInsets.only(bottom: 10),
-             child: Row(mainAxisAlignment: MainAxisAlignment.center,
-              children: [Text("Remember Password?",style: getBodyLineTextSTyle(context),),
-              TextButton(
-                style: TextButton.styleFrom(padding: EdgeInsets.zero),
-                
-                onPressed: (){}, child: Text("Login",style: getBodyLineTextSTyle(context,color: Appcolors.primarycolor),)),
-                
-                
-              
-              ],),
-           )
-         
-        
-          ]
-          ),
+          child: Column(children: [
+            Text(
+              "Forgot Password?",
+              style: getHeadLineTextSTyle(context),
+            ),
+            Gap(10),
+            Text(
+              "Don't worry! It occurs. Please enter the email\n address linked with your account.",
+              style: getSmallLineTextSTyle(context),
+            ),
+            Gap(32),
+            TextFormField(
+              decoration: InputDecoration(hintText: "Enter your email"),
+            ),
+            Gap(30),
+            CustomButtom(text: "Send Code", onTap: () {}),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Remember Password?",
+                    style: getBodyLineTextSTyle(context),
+                  ),
+                  TextButton(
+                      style: TextButton.styleFrom(padding: EdgeInsets.zero),
+                      onPressed: () {},
+                      child: Text(
+                        "Login",
+                        style: getBodyLineTextSTyle(context,
+                            color: Appcolors.primarycolor),
+                      )),
+                ],
+              ),
+            )
+          ]),
         ),
       ),
     );

@@ -13,13 +13,14 @@ class splash_view extends StatefulWidget {
 }
 
 class _splash_viewState extends State<splash_view> {
-    void initState() {
+  void initState() {
     // TODO: implement initState
     super.initState();
-    Future.delayed(Duration(seconds: 4),(){
+    Future.delayed(Duration(seconds: 4), () {
       pushReplacement(context, welcome_view());
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +30,10 @@ class _splash_viewState extends State<splash_view> {
           children: [
             SvgPicture.asset("assets/images/Group 2918 (1).svg"),
             Gap(15),
-            Text("Order Your Book Now!",style: getBodyLineTextSTyle(context,fontSize: 20),),
+            Text(
+              "Order Your Book Now!",
+              style: getBodyLineTextSTyle(context, fontSize: 20),
+            ),
           ],
         ),
       ),
