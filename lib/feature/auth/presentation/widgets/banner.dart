@@ -15,7 +15,7 @@ class bannerwidget extends StatefulWidget {
 }
 
 class _bannerwidgetState extends State<bannerwidget> {
-  int countbaner=0;
+  int countbaner = 0;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -73,14 +73,15 @@ class _bannerwidgetState extends State<bannerwidget> {
               enlargeFactor: 0.3,
               onPageChanged: (itemIndex, reason) {
                 setState(() {
-                  countbaner=itemIndex;
+                  countbaner = itemIndex;
                 });
               },
               scrollDirection: Axis.horizontal,
             )),
-            Gap(15),
+        Gap(15),
         SmoothPageIndicator(
-            controller: PageController(initialPage: countbaner), // PageController
+            controller:
+                PageController(initialPage: countbaner), // PageController
             count: 4,
             effect: ExpandingDotsEffect(
                 activeDotColor: Appcolors.primarycolor,

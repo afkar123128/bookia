@@ -13,7 +13,17 @@ class authblock extends Bloc<authevent, authstate> {
       if (value != null) {
         emit(LoginSuccessSTATE());
       } else {
-        emit(LoginErrorSTATE("login failed"));
+        emit(authErrorSTATE("login failed"));
+      }
+    });
+  }
+   Future<void> register(Registerevent event, Emitter<authstate> emit) async {
+    emit(RegisterlodingState());
+    await authrepo.register(event.params).then((value) {
+      if (value != null) {
+        emit(RegisterSuccessSTATE());
+      } else {
+        emit(authErrorSTATE("register failed"));
       }
     });
   }

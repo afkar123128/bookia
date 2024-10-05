@@ -44,16 +44,9 @@ class _homeState extends State<home> {
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            bannerwidget(),
-            Gap(20),
-            popularbook()
-          ],
+          children: [bannerwidget(), Gap(20), popularbook()],
         ),
       ),
     );
   }
 }
-
-
-

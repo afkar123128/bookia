@@ -34,7 +34,7 @@ class _login_viewState extends State<login_view> {
       listener: (context, state) {
         if (state is LoginSuccessSTATE) {
           pushReplacement(context, nav_bar());
-        } else if (state is LoginErrorSTATE) {
+        } else if (state is authErrorSTATE) {
           ScaffoldMessenger.of(context)
               .showSnackBar(SnackBar(content: Text(state.error)));
         }
@@ -121,11 +121,11 @@ class _login_viewState extends State<login_view> {
                                     text: "login",
                                     onTap: () {
                                       if (formkey.currentState!.validate()) {
-                                        authrepo.login
-                                            (loginmodelparams(
+                                        context.read<authblock>().add(
+                                            loginevent(loginmodelparams(
                                                 email: emailcontroller.text,
                                                 password:
-                                                    passwordcontroller.text));
+                                                    passwordcontroller.text)));
                                       }
                                     }),
                             Gap(20),
